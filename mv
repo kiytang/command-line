@@ -1,0 +1,14 @@
+mv (short for move)
+A unix command that moves one or more files or directories from one place to another.
+
+Since it can 'move' files from one filename to another, it can also be used to rename files.
+
+Examples:
+mv myfile mynewfilename           # renames 'myfile' to 'mynewfilename'
+mv myfile ~/myfiles               # moves 'myfile' from the current directory to user's home directory
+mv myfile subdir                  # moves 'myfile' to subdir/myfile relative to the current directory.
+
+mv !(bkup|bkup2) bkup2            # move all the files and directories (except bkup1, bkup2) to the 'bkup2' directory.
+
+mv be.03 /mnt/bkup/bes            # copies 'be.03' to the mounted volume 'bkup' the 'bes' directory, 
+                                  # then 'be.03' is removed.
