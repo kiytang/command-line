@@ -1,0 +1,15 @@
+Word Count
+
+wc can read for either standard input or a list of files and generates one of the following statistics:
+
+1/  newline
+2/  word count
+3/  character count
+
+If we want a more specific return result, we can use the folowing switches:
+
+-l    print the line count 
+-c    print the byte count
+-m    print the character count
+-L    print length of the longest line
+-w    print the word count
