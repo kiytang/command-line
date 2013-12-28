@@ -1,0 +1,38 @@
+The information below is taken from the following recommended blog:
+
+http://glennstovall.com/blog/2013/03/04/terminals-for-aboslute-beginners-part-4-searching/
+
+GREP:
+acronym for 'General Regular Expression Parser'
+
+The command grep takes 2 arguments:
+
+1/  the query string we are searching for.
+
+2/  the file pattern we will be searching through.
+
+The query string is a regular expression and the file pattern is the name of a file or directory, or a string with 
+wildcards and other special characters. 
+
+Example:
+we have a file named hello.rb and we want to find where the line that says "puts 'hello, world' is:
+
+grep "puts 'hello, world'" hello.rb
+
+Note: the search will not find anything if the line is slightly different. If the line had Hello, World! instead.
+There are x2 things we can do to make this search less strict:
+
+1:    pass the -i flag to make the search case insensitive
+2:    not search for the entire string
+
+We may also not be sure if the string is in hello.rb or some other ruby file, so let's search all ruby files
+in our current directory:
+
+grep -i "hello, world" *.rb
+
+In addition to -i, there are severall other useful flags with grep:
+
+-v    inverted match- will only return files that do not match the query provided
+-r    recursive     - if a directory is specified, will also search all sub-directories
+-n    prints out the line number of where the match was found
+-l    prints out the file name of where the match was found
