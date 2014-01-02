@@ -1,2 +1,44 @@
-In most Unix-like operating systems, the ps program (short for "process status") displays the currently-running processes. A related Unix utility named top provides a real-time view of the running processes.
-In Windows PowerShell, ps is a predefined command alias for the Get-Process cmdlet which essentially serves the same purpose.
+The ps command: source http://www.linfo.org/ps.html
+
+'ps' stands for process status-
+
+is used to provide information about the currently running processes, including their process identification numbers (PIDs)
+
+A process, also referred to as a task, is a running instance of a program.
+
+Basic syntax of ps is
+
+ps [options]
+
+when ps is used without options, it sends to standard output, which is the display monitor by default, four items of informatio
+for at least 2 processes currently on the syste,:
+
+1/  the shell
+2/  ps
+
+A shell is a program that provides the traditional,text-only iser interface for issueing commands and interacting with the
+system, and is bash by default on Linux.
+
+The 4 items are labeled:
+
+PID:  Process Identification Number
+
+TTY:  terminal type is the name of the console/terminal (i.e., combination of monitor and keyboard) that the user logged into.
+
+TIME  the amount of CPU time in min and sec that the process has been running
+
+CMD   the name of the command that launced the process
+
+Common ways to use ps:
+
+to obtain much more complete information about the processes currently on the system:
+
+ps -aux | less
+
+**
+-a option tells ps to list the processes of all users on the system rather than just those of the current user
+
+-u option tells ps toprovide detailed info. about each process
+
+-x option adds to the list process that have no controlling terminal, such as daemons, which are programs that are launched
+   during booting and run unobtrusively in the background until they are activated by a particular event or condition
